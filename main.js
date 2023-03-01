@@ -3,6 +3,7 @@ import './style.css';
 const form = document.querySelector('form');
 const phone = document.querySelector('#phone');
 const paste = document.querySelector('#paste');
+const clear = document.querySelector('#clear');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -19,6 +20,10 @@ paste.addEventListener('click', () => {
     phone.value = number;
     openWhatsApp();
   });
+});
+
+clear.addEventListener('click', () => {
+  phone.value = '';
 });
 
 function getPhoneNumber(number) {
