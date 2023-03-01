@@ -49,5 +49,5 @@ function openWhatsApp() {
     return;
   }
   const url = `https://api.whatsapp.com/send?phone=${number}`;
-  window.open(url, '_blank');
+  window.location.href = url;
 }
